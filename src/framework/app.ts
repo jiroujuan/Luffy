@@ -81,7 +81,7 @@ export interface AppOptions {
 const DEFAULT_OPTIONS: AppOptions = {
   host: '0.0.0.0',
   port: 8080,
-  appDir: path.join(path.resolve(__dirname, '../../../../app')),
+  appDir: path.join(path.resolve(__dirname, '../../../../bin')),
   ctrlDir: 'controllers',
   authDir: 'auths',
   apiPrefix: '/api',
