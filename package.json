@@ -1,5 +1,9 @@
 {
-  "name": "referrerapi",
+  "name": "luffy",
+  "version": "0.1.0",
+  "description": "Luren is a simple framework based on Koa2",
+  "main": "bin/index.js",
+  "repository": "https://github.com/jiroujuan/Luffy.git",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
