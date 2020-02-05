@@ -1,10 +1,11 @@
 {
-  "name": "luffy",
+  "name": "hapi-luffy",
   "version": "0.1.0",
-  "description": "Luren is a simple framework based on Koa2",
+  "description": "hapi-luffy is a framework based on Hapi",
   "main": "bin/index.js",
-  "repository": "https://github.com/jiroujuan/Luffy.git",
-  "private": true,
+  "author": "yyk",
+  "license": "UNLICENSED",
+  "public": true,
   "dependencies": {
     "axios": "^0.18.0",
     "config": "^3.2.5",
