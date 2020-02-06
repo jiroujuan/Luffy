@@ -60,6 +60,15 @@ export default class {
     server.events.on('stop', () => {
       console.log('Server stopped')
     })
+    server.ext('onPreResponse', request => {
+      // Transform only server errors
+      //@ts-ignore
+      if (request.response.isBoom && request.response.isServer) {
+        //@ts-ignore 
+        request.response.output.payload.message = request.response.message
+      }
+      return request.response
+    })
     process.on('unhandledRejection', err => {
       throw err
       process.exit(1)
