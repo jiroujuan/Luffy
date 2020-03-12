@@ -28,6 +28,8 @@ export default class {
     await this.router.registerRoutes(server)
     await this.docs.mountDocs(server)
     await server.start()
+
+    return server
   }
 
   async createServer() {
@@ -64,7 +66,7 @@ export default class {
       // Transform only server errors
       //@ts-ignore
       if (request.response.isBoom && request.response.isServer) {
-        //@ts-ignore 
+        //@ts-ignore
         request.response.output.payload.message = request.response.message
       }
       return request.response
