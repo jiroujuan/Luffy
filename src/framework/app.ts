@@ -12,6 +12,7 @@ export default class {
   security: Security
   router: Router
   docs: Docs
+  server: any
 
   constructor(options?: AppOptions) {
     this.options = _.merge({}, DEFAULT_OPTIONS, options)
@@ -29,7 +30,17 @@ export default class {
     await this.docs.mountDocs(server)
     await server.start()
 
-    return server
+    this.server = server
+
+    return this.server
+  }
+
+  async getServer() {
+    return this.server
+  }
+
+  async stop() {
+    await this.server.stop()
   }
 
   async createServer() {
