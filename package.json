@@ -1,6 +1,6 @@
 {
   "name": "hapi-luffy",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "hapi-luffy is a framework based on Hapi",
   "main": "bin/index.js",
   "author": "yyk",

@@ -34,9 +34,14 @@ export default class {
 
     return this.server
   }
-
   async getServer() {
-    return this.server
+    const server = await this.createServer()
+    await this.healthCheck.bind(server)
+    await this.security.loadStrategies(server)
+    await this.router.registerRoutes(server)
+    await this.docs.mountDocs(server)
+
+    return server
   }
 
   async stop() {
