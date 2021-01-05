@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "public": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "config": "^3.2.5",
     "elasticsearch": "^15.1.1",
     "hapi": "^17.5.2",
